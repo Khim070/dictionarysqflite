@@ -46,7 +46,7 @@ class _MainPageStateState extends State<MainPageState> {
 
   AppBar get _buildAppBar {
     return AppBar(
-      title: Text("English - Khmer"),
+      title: Text("Notes"),
       actions: [
         IconButton(
             onPressed: () async {
@@ -114,7 +114,6 @@ class _MainPageStateState extends State<MainPageState> {
             "${item.english}",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
-          //subtitle: Text("${item.khmer}"),
           trailing: IconButton(
             onPressed: () async {
               await _wordRepo.delete(item.id);
