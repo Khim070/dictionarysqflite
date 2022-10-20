@@ -46,7 +46,7 @@ class _MainPageStateState extends State<MainPageState> {
 
   AppBar get _buildAppBar {
     return AppBar(
-      title: Text("Notes"),
+      title: Text("English - Khmer"),
       actions: [
         IconButton(
             onPressed: () async {

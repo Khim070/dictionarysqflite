@@ -41,21 +41,6 @@ class _InsertPageState extends State<InsertPage> {
   AppBar get _buildAppBar {
     return AppBar(
       title: Text("Insert Word"),
-      actions: [
-        TextButton(
-            onPressed: () {
-              WordModel wordModel = WordModel(
-                id: DateTime.now().microsecond,
-                english: _englishCtrl.text.trim(),
-                khmer: _khmerCtrl.text.trim(),
-              );
-
-              _wordRepo.insert(wordModel).then((value) {
-                print("${value.id} inserted");
-              });
-            },
-            child: Text("Done"))
-      ],
     );
   }
 
@@ -89,7 +74,19 @@ class _InsertPageState extends State<InsertPage> {
           ),
         ),
         ElevatedButton.icon(
-            onPressed: () {}, icon: Icon(Icons.add), label: Text("Insert"))
+            onPressed: () {
+              WordModel wordModel = WordModel(
+                id: DateTime.now().microsecond,
+                english: _englishCtrl.text.trim(),
+                khmer: _khmerCtrl.text.trim(),
+              );
+
+              _wordRepo.insert(wordModel).then((value) {
+                print("${value.id} inserted");
+              });
+            },
+            icon: Icon(Icons.add),
+            label: Text("Insert"))
       ],
     );
   }
