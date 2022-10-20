@@ -46,7 +46,7 @@ class _MainPageStateState extends State<MainPageState> {
 
   AppBar get _buildAppBar {
     return AppBar(
-      title: Text("English - Khmer"),
+      title: Text("Notes"),
       actions: [
         IconButton(
             onPressed: () async {
@@ -110,7 +110,10 @@ class _MainPageStateState extends State<MainPageState> {
       },
       child: Card(
         child: ListTile(
-          title: Text("${item.english}"),
+          title: Text(
+            "${item.english}",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
           //subtitle: Text("${item.khmer}"),
           trailing: IconButton(
             onPressed: () async {
