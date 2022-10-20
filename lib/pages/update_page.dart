@@ -69,11 +69,19 @@ class _UpdatePagesState extends State<UpdatePages> {
           children: [
             TextFormField(
               controller: _updateenglish,
-              decoration: InputDecoration(hintText: "${item.english}"),
+              decoration: InputDecoration(
+                  hintText: "${item.english}", border: InputBorder.none),
+              style: const TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
             ),
             TextFormField(
               controller: _updatekhmer,
-              decoration: InputDecoration(hintText: "${item.khmer}"),
+              decoration: InputDecoration(
+                  hintText: "${item.khmer}", border: InputBorder.none),
+              keyboardType: TextInputType.multiline,
+              maxLines: null,
             ),
             ElevatedButton.icon(
                 onPressed: () async {

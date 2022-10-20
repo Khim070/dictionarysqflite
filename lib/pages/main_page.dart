@@ -111,7 +111,7 @@ class _MainPageStateState extends State<MainPageState> {
       child: Card(
         child: ListTile(
           title: Text("${item.english}"),
-          subtitle: Text("${item.khmer}"),
+          //subtitle: Text("${item.khmer}"),
           trailing: IconButton(
             onPressed: () async {
               await _wordRepo.delete(item.id);
