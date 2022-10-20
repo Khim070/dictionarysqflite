@@ -58,11 +58,20 @@ class _InsertPageState extends State<InsertPage> {
       children: [
         TextField(
           controller: _englishCtrl,
-          decoration: InputDecoration(hintText: "Enter English Word"),
+          decoration: InputDecoration(
+            hintText: "Enter title",
+            border: InputBorder.none,
+          ),
+          style: TextStyle(
+              fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
         ),
-        TextField(
-          controller: _khmerCtrl,
-          decoration: InputDecoration(hintText: "Enter Khmer Word"),
+        Expanded(
+          child: TextField(
+            controller: _khmerCtrl,
+            decoration: InputDecoration(border: InputBorder.none),
+            keyboardType: TextInputType.multiline,
+            maxLines: null,
+          ),
         ),
         ElevatedButton.icon(
             onPressed: () {
